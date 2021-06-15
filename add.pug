@@ -1,0 +1,21 @@
+extends layout
+block content
+    h1 Dodaj studenta
+    form(method='POST' action='/add')
+        table
+            tr
+                td
+                    label Imie
+                td
+                    input#name(type='text' name='name')
+            tr
+                td
+                    label Numer
+                td
+                    input#name(type='number' name='docnr')
+            tr
+                td
+                    button(type='submit') Dodaj
+                td
+    if message!=''
+        p #{message}

@@ -1,0 +1,23 @@
+extends start
+block content
+    h1 Lista studentów
+    table
+        thead
+            tr
+                th Lp.
+                th Imię
+                th Numer legitymacji
+				th Usun
+				th Edytuj
+				
+        tbody
+            each student, index in studentsList
+                tr
+                    td=index+1
+                    td=student.name
+                    td=student.docnr
+					td
+                        a(href="/delete/" +student.id) Usun
+					td
+                        a(href="/edit/" +student.id) Edytuj
+                    

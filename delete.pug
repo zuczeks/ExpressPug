@@ -1,0 +1,9 @@
+extends layout
+block content
+    h1 Usun studenta
+    form(method='POST' action='/delete/'+id)
+        button(type='submit') Usun
+
+    if message!=''
+        p #{message}
+

@@ -1,0 +1,18 @@
+doctype html
+html(lang='pl')
+    head
+        title='Lista studentów'
+    body
+        nav
+            ul
+                li
+                    a(href="/") Start
+                li
+                    a(href="/list") Lista
+                li
+                    a(href="/add") Dodaj
+        main#main
+        block content
+			h1 #{title}
+		footer#footer
+            p.footer-paragraph Aplikacja Studenci Node, Express, Pug

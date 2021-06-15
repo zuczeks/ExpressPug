@@ -1,0 +1,23 @@
+extends layout
+block content
+    h1 Edytuj
+    form(method='POST' action='/edit/'+id)
+        table
+                tr
+                    td
+                        label Imie
+                    td
+                        input#name(type='text' name = 'name' value=name)
+
+                tr
+                    td
+                        label Numer
+                    td
+                        input#number(type='number' name = 'docnr' value=docnr)
+                tr
+                    td
+                        button(type='submit') Edytuj
+
+    if message!=''
+        p #{message}
+
